@@ -1,10 +1,13 @@
 <page>
     <actionBar title="NativeFlix" />
-    <button text="Button" />
-    <stackLayout height="100%">
-      <listView height="100%" separatorColor="transparent" items="{flicks}">
+    <stackLayout height="100%">\
+      <listView
+        height="100%"
+        separatorColor="transparent"
+        items="{flicks}"
+        on:itemTap="{onFlickTap}"
+      >
         <Template let:item>
-          <!-- Add this 👇 -->
           <gridLayout
             height="280"
             borderRadius="10"
@@ -38,8 +41,17 @@
   </page>
   
   <script>
+    import { navigate } from 'svelte-native'
     import { Template } from 'svelte-native/components'
     import { FlickService } from '../services/FlickService'
+    import Details from './Details.svelte'
   
     let flicks = FlickService.getInstance().getFlicks()
+  
+    function onFlickTap(event) {
+      navigate({
+        page: Details,
+        props: { flickId: flicks[event.index].id }
+      })
+    }
   </script>

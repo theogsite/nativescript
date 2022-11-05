@@ -6,7 +6,7 @@ export class FlickService {
       id: 1,
       genre: 'Musical',
       title: 'Book of Mormon',
-      image: '/bookofmormon.png',
+      image: 'bookofmormon.png',
       url: 'https://nativescript.org/images/ngconf/book-of-mormon.mov',
       description: `A satirical examination of the beliefs and practices of The Church of Jesus Christ of Latter-day Saints.`,
       details: [
@@ -38,7 +38,7 @@ export class FlickService {
       id: 2,
       genre: 'Musical',
       title: 'Beetlejuice',
-      image: '/beetlejuicemusical.png',
+      image: './beetlejuicemusical.png',
       url: 'https://nativescript.org/images/ngconf/beetlejuice.mov',
       description: `A deceased couple looks for help from a devious bio-exorcist to handle their haunted house.`,
       details: [

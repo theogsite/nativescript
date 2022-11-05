@@ -1,5 +1,6 @@
 <page>
     <actionBar title="NativeFlix" />
+    <button text="Button" />
     <stackLayout height="100%">
       <listView height="100%" separatorColor="transparent" items="{flicks}">
         <Template let:item>
